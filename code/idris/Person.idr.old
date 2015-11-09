@@ -1,0 +1,21 @@
+module Person
+
+import list 
+
+||| A record type that is equivalent to:
+||| (data Person = mkPerson String nat)
+||| but where we give names to fields.
+||| A person has a name and an age in
+||| years.
+record Person where
+    constructor MkPerson
+    name : String
+    age : Nat
+
+mapAge1: list Person -> list Nat
+mapAge1 nil =  nil
+mapAge1 (h::t) = (age h)::(mapAge1 t) 
+
+map1: (a -> b) -> list a -> list b
+map1 f nil = nil
+map1 f (h::t) = (f h)::(map1 f t)

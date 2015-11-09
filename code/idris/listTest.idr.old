@@ -1,0 +1,34 @@
+module listTest
+
+import list
+import nat
+
+ln1: list nat
+ln1 = cons (S (S O)) (cons (S O) nil)
+
+||| a test, expecting nil
+apln1: list nat
+apln1 = append nil nil
+
+||| a test, expecting cons (S O) nil
+apln2: list nat
+apln2 = append (cons (S O) nil) nil
+
+||| a test, expecting cons (S (S O)) (cons (S O) (cons (S (S (S O))) nil))
+apln3: list nat
+apln3 = append ln1 (cons (S (S (S O))) nil)
+
+lnil: list nat
+lnil = nil 
+
+||| a test, expecting O
+lln1: nat
+lln1 = length lnil
+
+||| a test, expecting O
+lln3: nat
+lln3 = length nil {a=nat}
+
+||| a test, expecting S (S O)
+lln2: nat
+lln2 = length ln1

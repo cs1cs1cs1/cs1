@@ -1,0 +1,30 @@
+module PersonTest
+
+import Person
+
+-- An example value of type Person
+p: Person
+p = MkPerson "Tommy" 3
+
+-- And now here's the key idea: The 
+-- names of the fields are automatically
+-- names of projection functions! Here
+-- we get out the age of person, p.
+t: Nat
+t = age p
+-- expect 3
+-- Here we get the name of person p.
+n: String
+n = name p
+-- expect "Tommy"
+
+Alexa: Person
+Alexa = MkPerson "Alexa" 18
+
+tAl: Nat
+tAl = age Alexa
+--expect 18
+
+nAl: String
+nAl = name Alexa
+--expect Alexa
