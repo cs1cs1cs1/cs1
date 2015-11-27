@@ -285,6 +285,7 @@ intersect (h::t) l2 = ite (member h l2)
 -- set_intersection: (eq a) => set a -> set a -> set a
 set_intersection (mkSet l1) (mkSet l2) = mkSet (intersect l1 l2)
 
+
 -------------------------------------
 
 -- hint: write and use a list_difference helper function

@@ -5,9 +5,10 @@ import ite
 import bool
 import eq
 import Serialize
+import set_spec
 
-||| mkSet is meant to be private (known and usable within module, not for clients)
-data set a = mkSet (list a)
+--||| mkSet is meant to be private (known and usable within module, not for clients)
+-- data set a = mkSet (list a)
 
 ||| a starting point for building any set- empty set
 new_set: set a
